@@ -1,0 +1,31 @@
+#first {
+  width: 60%;
+  margin-left: 20%;
+}
+
+#text-intro {
+  font-size: 1.2em;
+  color: white;
+  font-family: 'Exo 2', sans-serif;
+  text-align: center;
+}
+
+#basic-info {
+  margin-top: 40px;
+  text-align: justify;
+  font-family: 'Exo 2', sans-serif;
+}
+
+table {
+  width: 100%;
+}
+
+th, td {
+  color: white;
+  text-align: center;
+  width: 350px;
+}
+
+.ilustration {
+    width: 90%;
+}

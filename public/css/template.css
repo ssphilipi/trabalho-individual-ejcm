@@ -1,0 +1,49 @@
+body, html {
+  height 100%;
+}
+
+body {
+  background-color: black;
+
+  height: 100%;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nav {
+  background-color: #686480;
+  position: sticky;
+  top: 0;
+}
+
+li {
+  display: inline;
+  float: right;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.menu-item {
+  display: block;
+  padding: 8px;
+}
+
+.page-footer {
+  margin-top: 5%;
+  font-size: 0.7em;
+  background-color: #2D202F;
+}
+
+.brand-logo {
+  font-family: 'Exo 2', sans-serif;
+}
+
+.menu-item, #caixa-contato {
+  font-family: 'Varela Round', sans-serif;
+}
+
+.footer-copyright {
+  text-align: center;
+}
