@@ -26,7 +26,7 @@ Route::get('/trocas', function(){
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('area.restrita');
 
 Route::get('/usuario', 'HomeController@usuario')->name('usuario');
 
