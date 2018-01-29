@@ -27,9 +27,9 @@ class HomeController extends Controller
         return view('home');
     }
 
-    // public function usuario() {
-    //   if($user = Auth::user()) {
-    //     return view('usuario');
-    //   }
-    // }
+    public function usuario() {
+      if($user = Auth::user()) {
+        return view('usuario');
+      }
+    }
 }
