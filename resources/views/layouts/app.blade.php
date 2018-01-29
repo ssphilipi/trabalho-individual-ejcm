@@ -5,17 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/css/materialize.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/bookverse.css') }}">
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Bookverse</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
 
@@ -29,7 +32,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        Bookverse
                     </a>
                 </div>
 
@@ -43,17 +46,17 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @guest
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
+                            <li><a class ="menu-item" href="{{ route('login') }}">Login</a></li>
+                            <li><a class ="menu-item" href="{{ route('register') }}">Register</a></li>
                         @else
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                                <a class ="menu-item" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a href="{{ route('logout') }}"
+                                        <a class ="menu-item" href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                             Logout
@@ -74,7 +77,47 @@
         @yield('content')
     </div>
 
+    <footer class="page-footer">
+      <div class="container white-text">
+        <div class="row">
+          <div class="col s4 m4 l4">
+            <p id="caixa-contato">
+              Contato:<br>
+              Telefone: (YY) XXXX-XXXX<br>
+              E-mail: sac@bookvere.com.br<br>
+            </p>
+          </div>
+          <div class="col s6 m6 l6 offset-s2 offset-m2 offset l2 left">
+            <div class="row">
+              <div class="col s3 m2 l2 offset-s0 offset-m4 offset-l4">
+                <a href="#" ><img src="{{ asset('css/icons/facebook.png') }}"></a>
+              </div>
+              <div class="col s3 m2 l2">
+                <a href="#" ><img src="{{ asset('css/icons/twitter.png') }}"></a>
+              </div>
+              <div class="col s3 m2 l2">
+                <a href="#" ><img src="{{ asset('css/icons/reddit.png') }}"></a>
+              </div>
+              <div class="col s3 m2 l2">
+                <a href="#" ><img src="{{ asset('css/icons/pinterest.png') }}"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          © Bookverse 2018<br>
+          <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+        </div>
+      </div>
+    </footer>
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script rel="stylesheet" src="css/js/materialize.min.js"></script>
+
 </html>

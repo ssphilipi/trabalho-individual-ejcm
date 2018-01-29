@@ -1,7 +1,7 @@
-@extends('template.template')
+@extends('layouts.template')
 
 @section('title', 'Bookverse')
-<link rel="stylesheet" type="text/css" href="<?php echo asset('css/trocas.css')?>">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/trocas.css') }}">
 
 @section('body')
 
@@ -11,7 +11,7 @@
   </p>
 
   <div class="container white-text">
-    <form action="{{route('upload')}}" enctype="multipart/form-data method=POST">
+    <form action="#" enctype="multipart/form-data method=POST">
       {{ csrf_field() }}
       Nome:<br>
       <input type="text" name="name">

@@ -1,16 +1,16 @@
-@extends('template.template')
+@extends('layouts.template')
 
 @section('title', 'Bookverse')
 
-<link rel="stylesheet" type="text/css" href="<?php echo asset('css/info.css')?>">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/info.css') }}">
 
 @section('body')
   <div class="container">
     <div id="slideshow">
       <div class="slide-wrapper">
-        <div class="slide"><img class="slide" src="<?php echo asset('css/img/4.jpg')?>"></div>
-        <div class="slide"><img class="slide" src="<?php echo asset('css/img/5.jpg')?>"></div>
-        <div class="slide"><img class="slide" src="<?php echo asset('css/img/8.jpg')?>"></div>
+        <div class="slide"><img class="slide" src="{{ asset('css/img/4.jpg') }}"></div>
+        <div class="slide"><img class="slide" src="{{ asset('css/img/5.jpg') }}"></div>
+        <div class="slide"><img class="slide" src="{{ asset('css/img/8.jpg') }}"></div>
         <div class="slide"><h1 class="slide-number">4</h1></div>
         <div class="slide"><h1 class="slide-number">5</h1></div>
       </div>

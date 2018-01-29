@@ -18,9 +18,12 @@ li {
   font-family: 'Varela Round', sans-serif;
 }
 
-.menu-item {
-  display: block;
-  padding: 8px;
+.navbar-brand {
+  font-family: 'Exo 2', sans-serif;
+}
+
+.footer-copyright {
+  text-align: center;
 }
 
 .page-footer {
@@ -29,14 +32,7 @@ li {
   background-color: #2D202F;
 }
 
-.brand-logo {
-  font-family: 'Exo 2', sans-serif;
-}
-
-.menu-item, #caixa-contato {
-  font-family: 'Varela Round', sans-serif;
-}
-
-.footer-copyright {
-  text-align: center;
+.menu-item {
+  display: block;
+  padding: 8px;
 }

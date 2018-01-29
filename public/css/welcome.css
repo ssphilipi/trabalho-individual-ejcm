@@ -10,22 +10,8 @@
   text-align: center;
 }
 
-#basic-info {
-  margin-top: 40px;
-  text-align: justify;
-  font-family: 'Exo 2', sans-serif;
-}
-
-table {
-  width: 100%;
-}
-
-th, td {
-  color: white;
-  text-align: center;
-  width: 350px;
-}
-
-.ilustration {
-    width: 90%;
+#slider {
+  position: absolute;
+  margin-top:50%;
+  z-index: -1;
 }

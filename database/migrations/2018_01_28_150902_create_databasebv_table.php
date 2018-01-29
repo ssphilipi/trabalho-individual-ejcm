@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTrocasTable extends Migration
+class CreateDatabasebvTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreateTrocasTable extends Migration
      */
     public function up()
     {
-        Schema::create('trocas', function (Blueprint $table) {
+        Schema::create('databasebv', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
             $table->string('name');
             $table->string('email');
-            $table->string('opinion');
-            // $table->blob('image');
+            $table->text('message');
         });
     }
 
@@ -30,6 +29,6 @@ class CreateTrocasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('trocas');
+        Schema::dropIfExists('databasebv');
     }
 }

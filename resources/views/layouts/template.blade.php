@@ -8,12 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" type="text/css" href="<?php echo asset('css/css/materialize.min.css')?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo asset('css/template.css')?>">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/css/materialize.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/template.css') }}">
 
     <!-- fonts: -->
     <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <title> @yield('title')</title>
 
@@ -23,10 +24,17 @@
 
     <nav class="z-depth-1">
       <div class="nav-wrapper">
-        <a href="{{route('home')}}" class="brand-logo left">
+        <a href="{{route('home')}}" class="brand-logo">
           Bookverse
         </a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="navigation" class="right hide-on-med-and-down">
+          <li><a class ="menu-item" href="#">Assine</a></li>
+          <li><a class ="menu-item" href="{{route('info')}}">Mais informações</a></li>
+          <li><a class ="menu-item" href="{{route('trocas')}}">Troque livros</a></li>
+          <li><a class ="menu-item" href="{{route('contato')}}">Fale Conosco</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
           <li><a class ="menu-item" href="#">Assine</a></li>
           <li><a class ="menu-item" href="{{route('info')}}">Mais informações</a></li>
           <li><a class ="menu-item" href="{{route('trocas')}}">Troque livros</a></li>
@@ -49,17 +57,17 @@
           </div>
           <div class="col s6 m6 l6 offset-s2 offset-m2 offset l2 left">
             <div class="row">
-              <div class="col s2 m2 l2 offset-s4 offset-m4 offset-l4">
-                <a href="#" ><img src="<?php echo asset('css/icons/facebook.png')?>"></a>
+              <div class="col s3 m2 l2 offset-s0 offset-m4 offset-l4">
+                <a href="#" ><img src="{{ asset('css/icons/facebook.png') }}"></a>
               </div>
-              <div class="col s2 m2 l2">
-                <a href="#" ><img src="<?php echo asset('css/icons/twitter.png')?>"></a>
+              <div class="col s3 m2 l2">
+                <a href="#" ><img src="{{ asset('css/icons/twitter.png') }}"></a>
               </div>
-              <div class="col s2 m2 l2">
-                <a href="#" ><img src="<?php echo asset('css/icons/reddit.png')?>"></a>
+              <div class="col s3 m2 l2">
+                <a href="#" ><img src="{{ asset('css/icons/reddit.png') }}"></a>
               </div>
-              <div class="col s2 m2 l2">
-                <a href="#" ><img src="<?php echo asset('css/icons/pinterest.png')?>"></a>
+              <div class="col s3 m2 l2">
+                <a href="#" ><img src="{{ asset('css/icons/pinterest.png') }}"></a>
               </div>
             </div>
           </div>
@@ -76,6 +84,13 @@
   </body>
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script rel="stylesheet" src="js/materialize.min.js"></script>
+  <script rel="stylesheet" src="css/js/materialize.min.js"></script>
+
+  <script>
+    $( document ).ready(function(){
+      $(".button-collapse").sideNav();
+      $('.slider').slider({height: 450});
+    })
+  </script>
 
 </html>

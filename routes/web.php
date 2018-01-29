@@ -1,5 +1,6 @@
 <?php
 
+use App\Mail\message;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,12 +24,11 @@ Route::get('/trocas', function(){
   return view('pages.trocas');
 })->name('trocas');
 
-Route::get('/contato', function(){
-  return view('pages.contato');
-})->name('contato');
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('login');
+Route::get('/home', 'HomeController@index')->name('home');
 
-Route::post('upload', 'UploadController@store')->name('upload');
+Route::get('/usuario', 'HomeController@usuario')->name('usuario');
+
+Route::get('contato' , 'ContactUSController@contactUS')->name('contato');
+Route::post('contato' , ['as'=>'contactus.store' , 'uses'=>'ContactUSController@contactUSPost']);
